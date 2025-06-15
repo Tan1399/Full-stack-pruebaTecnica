@@ -30,6 +30,9 @@ CREATE TABLE products (
 
 ALTER TABLE users ADD rol VARCHAR(20) DEFAULT 'user';
 
+el role debe ser user siempre esto está predeterminado en el código, pero rol no, siempre que se registra autoamticamente queda como user incluso el rol, pero en la bd se puede hacer el registro de admin en rol, o usando Post para crear cuentas de administrador,
+en resumen role siempre debe estar en user, pero role se puede agregar admin o user ahí es donde se hacen las verificaciones.
+
 
 es recomendable agregar estos links y crear los productos desde la bd para que se puedan visualizar desde el inicio de lo contrario se tienen que agregar desde la bd o desde el panel para el administrador, dentro de  next.config.js hay varias rutas permitidas para la url de las imagenes estas son:  
        'nuribel.com',
